@@ -3,16 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "html-webpack-plugin": "^5.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.0.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^6.1.12",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "postcss-loader": "^4.0.0",
+    "source-map-loader": "^4.0.0",
+    "style-loader": "^2.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=2000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

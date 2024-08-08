@@ -1,38 +1,242 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .App {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 600px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*--------------------*/
+/* 페이지 버튼 */
+
+.page {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page p {
+  padding: 5px 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 7px;
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*--------------------*/
+/* 퀴즈 리스트 */
+.questionlist-header {
+  display: flex;
+  width: 100%;
+}
+
+.question-box{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.question-card{
+  border-radius: 10px;
+  border: 0.5px solid #ccc;
+  padding: 20px; 
+}
+
+.question-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.card-floor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tags{
+  display: flex;
+  gap: 10px;
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.tag-box {
+  display: flex;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+
+/*--------------------*/
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.ans {
+  justify-content: flex-start;
+}
+
+button {
+  background: black;
   color: white;
+  border: none;
+  padding: 4px 15px;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ans-button {
+  background: none;
+  color: black;
+  padding: 5px 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.ans-button:hover {
+  background: none;
+}
+
+/*--------------------*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0.5px solid #ccc;
+  resize: none;
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0.5px solid #ccc;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/*--------------------*/
+.search-question {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 10px 0;
+  width: 100%;
+  gap: 10px;
+}
+
+.search-question.make {
+  justify-content: flex-start;
+}
+
+
+.search-question input{
+  width: 200px;
+}
+
+/*---------------------*/
+.answer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 15px;
+}
+
+.additional-ans {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.additional-ans li {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 0;
+  padding: 0;
+  border-top: 0.5px solid #ccc;
+}
+
+/*---------------------*/
+.search-question select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: white;
+  font-size: 13px;
+}
+
+.search-question select:focus {
+  outline: none;
+  border-color: #ccc;
+}
+
+.search-question option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: white;
 }
